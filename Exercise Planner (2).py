@@ -1,7 +1,7 @@
 def get_exercises(age, height, weight,):
     exercises = []
 
-    # Age group: 0-18
+    
     if age<15:
          print("Wait till you are 18 ")
     elif 15<= age <= 18:
@@ -27,7 +27,7 @@ def get_exercises(age, height, weight,):
             else:
                 exercises = ["Running (35 mins,3 times with 5 min break in between)","Waist twisting(100 each side)","Daily 12000 steps "]
 
-    # Age group: 19-60
+    
     elif 19 <= age <= 60:
         if weight < 60:
             exercises = ["Yoga", "Pilates", "Light Jogging"]
@@ -36,7 +36,7 @@ def get_exercises(age, height, weight,):
         else:
             exercises = ["Walking", "Swimming", "Low-Impact Aerobics"]
 
-    # Age group: 61 and above
+   
     elif age > 60:
         if height < 150:
             if weight <= 60:
@@ -62,7 +62,7 @@ def get_exercises(age, height, weight,):
     
 
 def get_workout_plan(goal, fitness_level):
-    # Define a structured workout plan based on goals and fitness levels
+   
     workout_plans = {
         "weight_loss": {
             "beginner": [
@@ -132,23 +132,23 @@ def main():
         
         print("\nBased on your age, height, and weight, you can try the following exercises:")
         for exercise in exercises:
-            print(exercise) #To read the list 
+            print(exercise) 
         
-        # Summary 
+         
         print("\nSummary:")
         print(f"Age: {age}, Height: {height} cm, Weight: {weight} kg")
 
-        # Ask if the user wants gym-related exercises
+        
         gym_request = input("\nWould you like some gym-related exercises? (yes/no): ").strip().lower()
         
         if gym_request == "yes":
             goal = input("What is your fitness goal? (weight_loss, muscle_gain, endurance): ").strip().lower()
             fitness_level = input("What is your fitness level? (beginner, intermediate, advanced): ").strip().lower()
     
-           # Generate workout plan
+          
             workout_plan = get_workout_plan(goal, fitness_level)
     
-            # Display the workout plan
+            
             if workout_plan:
                print("\nYour Structured Workout Plan:")
             for exercise in workout_plan:
